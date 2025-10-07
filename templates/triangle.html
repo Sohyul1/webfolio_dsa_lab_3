@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area of Triangle</title>
+</head>
+<body>
+    <h2>Calculate Area of a Triangle</h2>
+    <form method="POST">
+        <label>Base:</label>
+        <input type="number" name="base" step="0.01" required>
+        <label>Height:</label>
+        <input type="number" name="height" step="0.01" required>
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if area %}
+    <h3>Area: {{ area }}</h3>
+    {% endif %}
+
+    <a href="/">Back to Home</a>
+</body>
+</html>
