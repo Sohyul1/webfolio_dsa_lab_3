@@ -18,7 +18,7 @@ def works():
         result = input_string.upper()
     return render_template('touppercase.html', result=result)
 
-@app.route('/circle', methods=['GET', 'POST'])
+@app.route('/areaOfcircle', methods=['GET', 'POST'])
 def circle():
     area = None
     if request.method == 'POST':
@@ -26,7 +26,7 @@ def circle():
         area = 3.14159 * (radius ** 2)
     return render_template('circle.html', area=area)
 
-@app.route('/triangle', methods=['GET', 'POST'])
+@app.route('/areaOfTriangle', methods=['GET', 'POST'])
 def triangle():
     area = None
     if request.method == 'POST':
