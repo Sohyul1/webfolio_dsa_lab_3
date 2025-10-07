@@ -38,7 +38,7 @@ def triangle():
 
 @app.route('/contact')
 def contact():
-    return "Contact Page. please create me an html page with dummy contact info"
+    return render_template('contact.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
