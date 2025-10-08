@@ -2,18 +2,81 @@
 <html>
 <head>
     <title>Convert to Uppercase</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .form-box {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 400px;
+            margin: 120px auto;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            width: 80%;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #2196F3;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #64b5f6;
+        }
+
+        a {
+            color: #90caf9;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h3 {
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1>Convert String to Uppercase</h1>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/profile">Profile</a> |
+        <a href="/works">Works</a> |
+        <a href="/contact">Contact</a>
+    </nav>
 
-    <form action="/works" method="post">
-        <label for="inputString">Enter a string:</label>
-        <input type="text" id="inputString" name="inputString">
-        <input type="submit" value="Convert">
-    </form>
+    <div class="form-box">
+        <h1>Convert String to Uppercase</h1>
 
-    {% if result %}
-    <p>Converted string: {{ result }}</p>
-    {% endif %}
+        <form method="POST">
+            <label for="inputString">Enter text:</label><br>
+            <input type="text" id="inputString" name="inputString" required><br>
+            <input type="submit" value="Convert">
+        </form>
+
+        {% if result %}
+        <h3>Converted string: {{ result }}</h3>
+        {% endif %}
+
+        <a href="/works">← Back to Works</a>
+    </div>
 </body>
 </html>
