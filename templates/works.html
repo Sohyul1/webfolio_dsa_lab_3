@@ -1,18 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>My Works</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .works-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px 0;
+        }
+
+        a {
+            color: #e3f2fd;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #bbdefb;
+        }
+    </style>
 </head>
 <body>
-    <h2>My Programming Works</h2>
-    <p>Choose a program to try:</p>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/profile">Profile</a> |
+        <a href="/works">Works</a> |
+        <a href="/contact">Contact</a>
+    </nav>
 
-    <ul>
-        <li><a href="/touppercase">To Upper Case Converter</a></li>
-        <li><a href="/areaOfcircle">Area of a Circle</a></li>
-        <li><a href="/areaOfTriangle">Area of a Triangle</a></li>
-    </ul>
-
-    <a href="/">Back to Home</a>
+    <div class="works-container">
+        <h2>Programming Works</h2>
+        <ul>
+            <li><a href="/touppercase">Text Uppercase Converter</a></li>
+            <li><a href="/areaOfcircle">Area of a Circle Calculator</a></li>
+            <li><a href="/areaOfTriangle">Area of a Triangle Calculator</a></li>
+        </ul>
+    </div>
 </body>
 </html>
