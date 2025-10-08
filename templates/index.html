@@ -1,28 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <title>Home - Aeron Joshua Dequito</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .home-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 700px;
+            margin: 120px auto;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #e3f2fd;
+            font-size: 1.2em;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #e3f2fd;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 10px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .buttons a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #bbdefb;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Our Website</h1>
-
     <nav>
-        <ul>
-            <li><a href="/profile">Profile</a></li>
-            <li><a href="/works">Works</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
+        <a href="/">Home</a> |
+        <a href="/profile">Profile</a> |
+        <a href="/works">Works</a> |
+        <a href="/contact">Contact</a>
     </nav>
 
+    <div class="home-container">
+        <h1>Welcome to My Webfolio</h1>
+        <p>Explore my programming projects, learn more about me, and feel free to connect!</p>
 
-    <h1>Welcome to my programming works</h1>
-    <p>Instruction: create a route and a page for the link that are not working</p>
-
-    <ul>
-        <li><a href="/works">toUpperCase</a></li>
-        <li><a href="/areaOfcircle">Area of a Circle</a></li>
-        <li><a href="/areaOfTriangle">Area of a Triangle</a></li>
-    </ul>
+        <div class="buttons">
+            <a href="/profile">View Profile</a>
+            <a href="/works">See My Works</a>
+            <a href="/contact">Contact Me</a>
+        </div>
+    </div>
 </body>
 </html>
-
