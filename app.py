@@ -12,11 +12,16 @@ def profile():
 
 @app.route('/works', methods=['GET', 'POST'])
 def works():
+    return  render_template('works.html')
+
+@app.route('/touppercase', methods=['GET', 'POST'])
+def touppercase():
     result = None
     if request.method == 'POST':
         input_string = request.form.get('inputString', '')
         result = input_string.upper()
     return render_template('touppercase.html', result=result)
+
 
 @app.route('/areaOfcircle', methods=['GET', 'POST'])
 def circle():
@@ -34,7 +39,6 @@ def triangle():
         height = float(request.form.get('height', 0))
         area = 0.5 * base * height
     return render_template('triangle.html', area=area)
-
 
 @app.route('/contact')
 def contact():
