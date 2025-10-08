@@ -7,43 +7,46 @@
     <style>
         .works-container {
             background-color: rgba(0, 0, 0, 0.5);
-            width: 80%;
-            max-width: 600px;
-            margin: 100px auto;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            padding: 60px 80px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 100px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            text-align: center;
         }
 
         h2 {
             color: #fff;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            font-size: 1.8em;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .works-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
 
-        li {
-            margin: 15px 0;
-        }
-
-        a {
+        .works-buttons a {
             color: #e3f2fd;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: bold;
             background-color: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 10px;
-            display: inline-block;
+            padding: 15px 60px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
         }
 
-        a:hover {
+        .works-buttons a:hover {
             background-color: rgba(255, 255, 255, 0.3);
             color: #bbdefb;
+            transform: scale(1.03);
         }
     </style>
 </head>
@@ -57,11 +60,11 @@
 
     <div class="works-container">
         <h2>Programming Works</h2>
-        <ul>
-            <li><a href="/touppercase">Text Uppercase Converter</a></li>
-            <li><a href="/areaOfcircle">Area of a Circle Calculator</a></li>
-            <li><a href="/areaOfTriangle">Area of a Triangle Calculator</a></li>
-        </ul>
+        <div class="works-buttons">
+            <a href="/touppercase">Text Uppercase Converter</a>
+            <a href="/areaOfcircle">Area of a Circle Calculator</a>
+            <a href="/areaOfTriangle">Area of a Triangle Calculator</a>
+        </div>
     </div>
 </body>
 </html>
