@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>My Profile</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
         .profile-container {
-            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 40px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 100px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
         }
+
         .profile-container img {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             object-fit: cover;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
             margin-bottom: 20px;
         }
+
         h2 {
-            margin-bottom: 5px;
+            color: #fff;
+            margin-bottom: 10px;
         }
+
         p {
-            color: #555;
+            color: #e3f2fd;
+        }
+
+        em {
+            color: #bbdefb;
         }
     </style>
 </head>
