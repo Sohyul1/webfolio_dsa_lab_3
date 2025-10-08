@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Profile</title>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .profile-container {
+            text-align: center;
+            padding: 40px;
+        }
+        .profile-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-bottom: 5px;
+        }
+        p {
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <h2>My Profile</h2>
-    <p><strong>Name:</strong> Your Name Here</p>
-    <p><strong>Course:</strong> BS Computer Engineering</p>
-    <p><strong>School:</strong> Polytechnic University of the Philippines</p>
-    <p><strong>About Me:</strong> I’m passionate about programming, learning new technologies, and improving my skills every day.</p>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/profile">Profile</a> |
+        <a href="/works">Works</a> |
+        <a href="/contact">Contact</a>
+    </nav>
 
-    <a href="/">Back to Home</a>
+    <div class="profile-container">
+        <img src="{{ url_for('static', filename='image/profile.jpeg') }}" alt="Profile Picture">
+        <h2>Aeron Joshua Dequito</h2>
+        <p>BS Computer Engineering Student</p>
+        <p><em>"Discipline is the bridge between goals and achievement."</em></p>
+    </div>
 </body>
 </html>
